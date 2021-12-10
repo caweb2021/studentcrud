@@ -14,6 +14,9 @@ export class StudentsMapper {
         fields.forEach((field) => {
             entity[field] = entityDTO[field];
         });
+		// delete entity.studentIdentifier;
+		entity.identifier = entityDTO.studentIdentifier;
+		// entity.studentIdentifier = entityDTO.studentIdentifier;
         return entity;
     }
 
@@ -28,7 +31,16 @@ export class StudentsMapper {
         fields.forEach((field) => {
             entityDTO[field] = entity[field];
         });
-
+		/*entityDTO.id = entity.id;
+		entityDTO.studentIdentifier = entity.identifier;
+		entityDTO.identifier = entity.identifier;
+		entityDTO.studentFirstName = entity.studentFirstName;
+		entityDTO.studentLastName = entity.studentLastName;
+		entityDTO.dateOfBirth = entity.dateOfBirth;
+		entityDTO.schoolYear = entity.schoolYear;
+		entityDTO.className = entity.className;
+		entityDTO.studentName = entity.studentName;
+*/
         return entityDTO;
     }
 }

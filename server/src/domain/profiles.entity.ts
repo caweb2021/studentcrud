@@ -7,7 +7,7 @@ import { BaseEntity } from './base/base.entity';
  */
 @Entity('profiles')
 export class Profiles extends BaseEntity {
-    @Column({ name: 'profile_identifier', unique: true })
+    @Column({ name: 'profileIdentifier', unique: true })
     profileIdentifier: string;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

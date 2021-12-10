@@ -10,8 +10,11 @@ export class StudentsDTO extends BaseDTO {
     @IsNotEmpty()
     @ApiModelProperty({ description: 'studentIdentifier field' })
     studentIdentifier: string;
-
-    @IsNotEmpty()
+	
+	@ApiModelProperty({ description: 'studentIdentifier field' })
+    identifier: string;
+    
+	@IsNotEmpty()
     @ApiModelProperty({ description: 'studentFirstName field' })
     studentFirstName: string;
 
@@ -28,5 +31,7 @@ export class StudentsDTO extends BaseDTO {
     @ApiModelProperty({ description: 'className field', required: false })
     className: string;
 
+	@ApiModelProperty({ description: 'full student name field', required: false })
+    studentName: string;
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 }

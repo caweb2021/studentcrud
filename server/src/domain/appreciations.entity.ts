@@ -7,7 +7,7 @@ import { BaseEntity } from './base/base.entity';
  */
 @Entity('appreciations')
 export class Appreciations extends BaseEntity {
-    @Column({ name: 'appreciation_identifier', unique: true })
+    @Column({ name: 'appreciationIdentifier', unique: true })
     appreciationIdentifier: string;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

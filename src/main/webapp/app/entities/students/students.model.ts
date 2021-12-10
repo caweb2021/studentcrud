@@ -8,6 +8,7 @@ export interface IStudents {
   dateOfBirth?: dayjs.Dayjs | null;
   schoolYear?: string | null;
   className?: string | null;
+  studentName?: string;
 }
 
 export class Students implements IStudents {
@@ -18,7 +19,8 @@ export class Students implements IStudents {
     public studentLastName?: string,
     public dateOfBirth?: dayjs.Dayjs | null,
     public schoolYear?: string | null,
-    public className?: string | null
+    public className?: string | null,
+    public studentName?: string
   ) {}
 }
 

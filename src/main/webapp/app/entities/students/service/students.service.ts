@@ -21,6 +21,7 @@ export class StudentsService {
 
   create(students: IStudents): Observable<EntityResponseType> {
     const copy = this.convertDateFromClient(students);
+    copy.studentName = `${copy.studentFirstName} ${copy.studentLastName}`;
     return this.http
       .post<IStudents>(this.resourceUrl, copy, { observe: 'response' })
       .pipe(map((res: EntityResponseType) => this.convertDateFromServer(res)));
@@ -28,6 +29,7 @@ export class StudentsService {
 
   update(students: IStudents): Observable<EntityResponseType> {
     const copy = this.convertDateFromClient(students);
+    copy.studentName = `${copy.studentFirstName} ${copy.studentLastName}`;
     return this.http
       .put<IStudents>(`${this.resourceUrl}/${getStudentsIdentifier(students) as string}`, copy, { observe: 'response' })
       .pipe(map((res: EntityResponseType) => this.convertDateFromServer(res)));

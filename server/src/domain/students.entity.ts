@@ -8,22 +8,28 @@ import { BaseEntity } from './base/base.entity';
 @Entity('students')
 export class Students extends BaseEntity {
     @Column({ name: 'student_identifier', unique: true })
+    identifier: string;
+    
+	@Column({ name: 'studentIdentifier', unique: true })
     studentIdentifier: string;
 
-    @Column({ name: 'student_first_name' })
+    @Column({ name: 'studentFirstName' })
     studentFirstName: string;
 
-    @Column({ name: 'student_last_name' })
+    @Column({ name: 'studentLastName' })
     studentLastName: string;
 
-    @Column({ type: 'date', name: 'date_of_birth', nullable: true })
+    @Column({ type: 'date', name: 'dateOfBirth', nullable: true })
     dateOfBirth: any;
 
-    @Column({ name: 'school_year', nullable: true })
+    @Column({ name: 'schoolYear', nullable: true })
     schoolYear: string;
 
-    @Column({ name: 'class_name', nullable: true })
+    @Column({ name: 'className', nullable: true })
     className: string;
+	
+	@Column({ name: 'studentName', nullable: true })
+    studentName: string;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 }
